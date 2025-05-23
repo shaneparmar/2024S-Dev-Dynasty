@@ -1,53 +1,59 @@
-# Dev Dynasty - Pace University Capstone Project
+# 🎵 MoodSphere – Emotion-Based Music Recommendation
 
-# Project Overview:
-The Moodsphere project enhances music recommendations by factoring in users' emotions to create personalized playlists. Unlike traditional recommenders based on genres or artists, it adjusts suggestions based on users' current emotional states. By analyzing emotions, the system curates playlists that align with users' feelings at any moment, offering a more engaging experience. User profiles store emotional data and music preferences, allowing the system to adapt over time, improving the accuracy of recommendations. Ultimately, the project aims to revolutionize music discovery by combining emotion analysis with adaptive machine learning for a more personalized, emotionally resonant experience.
-
-# 🎵 MoodSphere – Emotion-Based Music Recommendation System
-
-**Capstone Project | Pace University – Seidenberg School of CSIS**  
-**Team Dev Dynasty | Class of 2024 | New York City**
+**Capstone Project • Dev Dynasty Team • Pace University (Spring 2024)**  
+**Engineer:** Shane Parmar
 
 ---
 
-## 📌 Overview
+## 🌟 Overview
 
-**MoodSphere** reimagines music recommendation by using your real-time **emotional state** to suggest songs that truly resonate. Unlike traditional systems that rely only on genre or artist, MoodSphere uses **AI-powered emotion detection** to personalize playlists based on how the user feels in the moment.
-
-> Upload a selfie → Predict mood using CNN → Recommend music from Firebase → Curate by artist, genre, or emotion.
+MoodSphere is an AI-powered music recommendation system that curates personalized playlists based on the user's emotional state. Unlike traditional music recommenders that rely solely on genre or artist preferences, MoodSphere uses deep learning to detect facial expressions and recommend songs that reflect how the user feels in real time.
 
 ---
 
 ## 🚀 Features
 
-- 🎭 **Real-time Emotion Prediction** (via CNN model and image upload)
-- 🔍 **Search by Genre, Artist, or Mood**
-- 🔁 **Firebase Integration** to fetch curated playlists
-- 🧠 **User History Aware** (backend-ready for profile-based learning)
-- ☁️ **Built with Flask, React (Vite), TensorFlow, and Firebase**
+- 🎭 Detects emotions using CNN + ResNet50 model from uploaded images
+- 🎧 Suggests music based on detected mood
+- 🔍 Search songs by **artist** and **genre**
+- 🔐 Firebase Authentication (login/signup)
+- 🧠 Personalized playlist management
+- 🔌 RESTful API integrations with Flask backend
+- 🖥️ Responsive frontend using React.js + Vite
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-| Frontend   | Backend    | AI/ML        | Cloud & Infra       |
-|------------|------------|--------------|----------------------|
-| React + Vite | Flask (Python) | TensorFlow + Keras | Firebase, Google Cloud Run, Docker-ready |
+| Layer      | Technology                       |
+|------------|----------------------------------|
+| Frontend   | React.js, Vite, JavaScript       |
+| Backend    | Flask, Python, Firebase Admin SDK|
+| ML Model   | CNN, ResNet50, TensorFlow        |
+| Database   | Firebase Realtime DB             |
+| Dev Tools  | GitHub, VS Code, Postman         |
 
 ---
 
-## 💻 Local Setup
+## 🔄 API Endpoints
 
-> You can run the project locally on `localhost:5173` (React) and `localhost:5000` (Flask)
+| Method | Endpoint             | Description                        |
+|--------|----------------------|------------------------------------|
+| POST   | `/predict`           | Predict mood from uploaded image   |
+| POST   | `/songs-by-genre`    | Get songs matching a genre         |
+| POST   | `/songs-by-artist`   | Get songs matching an artist       |
+| GET    | `/get-playlist`      | Retrieve user playlist             |
+| POST   | `/save-user`         | Save new user details              |
 
-### Prerequisites
+---
 
-- Node.js + npm
-- Python 3.10+
-- Git
+## 🧪 Running the Project Locally
 
-### 1. Clone the repository
+### 🔧 Backend (Flask + TensorFlow)
 
 ```bash
-git clone https://github.com/htmw/2024S-Dev-Dynasty.git
-cd 2024S-Dev-Dynasty
+cd moodsphere-backend
+python -m venv venv
+venv\Scripts\activate       # on Windows
+pip install -r requirements.txt
+python main.py              # Runs on http://127.0.0.1:5000
