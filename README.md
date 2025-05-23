@@ -1,6 +1,6 @@
 # 🎵 MoodSphere – Emotion-Based Music Recommendation
 
-**Capstone Project • Dev Dynasty Team • Pace University (Spring 2024)**  
+**Capstone Project • Pace University (Spring 2024)**  
 **Engineer:** Shane Parmar
 
 ---
